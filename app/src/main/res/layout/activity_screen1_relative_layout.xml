@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color_screen1"
+    android:orientation="vertical"
+    tools:context=".Screen1RelativeLayoutActivity">
+
+    <RelativeLayout
+        android:id="@+id/topIconsRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/arrowDownImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            app:srcCompat="@drawable/screen1_arrow_down_24" />
+
+        <LinearLayout
+            android:id="@+id/currentPlayingTextViewFrameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity=""
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nowPlayingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:alpha="0.8"
+                android:text="Сейчас играет"
+                android:textColor="#B7C6C1"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/underNowPlayingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foreground="@drawable/gradient_color"
+                android:text="Плейлист дня - Микс"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/connectedTvImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@id/listImageView"
+            app:srcCompat="@drawable/screen1_connected_tv_24" />
+
+        <ImageView
+            android:id="@+id/listImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            app:srcCompat="@drawable/screen1_list_24" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/albumPicturesRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/track1ImageView"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginEnd="30dp"
+            android:layout_toStartOf="@id/mainTrackImageView"
+            android:scaleType="matrix"
+            app:srcCompat="@drawable/track1" />
+
+        <ImageView
+            android:id="@+id/mainTrackImageView"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/main_track" />
+
+        <ImageView
+            android:id="@+id/track2ImageView"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@id/mainTrackImageView"
+            android:scaleType="matrix"
+            app:srcCompat="@drawable/track2" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/trackInfoRelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp">
+
+        <LinearLayout
+            android:id="@+id/trackPlayingLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mainTrackTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Angel (feat. Julie Elven)"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/underMainTrackTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:alpha="0.8"
+                android:text="R. Armando Morabito"
+                android:textColor="#B7C6C1"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/shareImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/moreImageView"
+            android:layout_toEndOf="@id/trackPlayingLinearLayout"
+            app:srcCompat="@drawable/screen1_share_24" />
+
+        <ImageView
+            android:id="@+id/moreImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/screen1_more_vert_24" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/seekBarLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="40dp"
+        android:orientation="vertical">
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/startSongTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:alpha="0.8"
+                android:text="0:00"
+                android:textColor="#B7C6C1"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/endSongTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:alpha="0.8"
+                android:text="5.27"
+                android:textColor="#B7C6C1"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/trackNavigationRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/deleteSongImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/screen1_delete_24" />
+
+        <ImageView
+            android:id="@+id/previousTrackImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/playTrackImageView"
+            android:layout_toEndOf="@id/deleteSongImageView"
+            app:srcCompat="@drawable/screen1_skip_previous_24" />
+
+        <ImageView
+            android:id="@+id/playTrackImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/circle_white"
+            app:srcCompat="@drawable/screen1_play_arrow_24" />
+
+        <ImageView
+            android:id="@+id/nextTrackImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/addSongImageView"
+            android:layout_toEndOf="@id/playTrackImageView"
+            app:srcCompat="@drawable/screen1_skip_next_24" />
+
+        <ImageView
+            android:id="@+id/addSongImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/screen1_add_24" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomButtonsLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/loopSongImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/screen1_loop_24" />
+
+        <ImageView
+            android:id="@+id/highQualityImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/screen1_high_quality_24" />
+
+        <ImageView
+            android:id="@+id/timerImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/screen1_timer_24" />
+
+        <ImageView
+            android:id="@+id/shuffleSongImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/screen1_shuffle_24" />
+    </LinearLayout>
+</LinearLayout>

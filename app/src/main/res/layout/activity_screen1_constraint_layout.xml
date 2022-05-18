@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color_screen1"
+    tools:context=".Screen1ConstraintLayoutActivity">
+
+    <ImageView
+        android:id="@+id/arrowDownImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/screen1_arrow_down_24" />
+
+    <TextView
+        android:id="@+id/nowPlayingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:alpha="0.8"
+        android:text="Сейчас играет"
+        android:textColor="#B7C6C1"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/underNowPlayingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foreground="@drawable/gradient_color"
+        android:text="Плейлист дня - Микс"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nowPlayingTextView" />
+
+    <ImageView
+        android:id="@+id/connectedTvImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/listImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/screen1_connected_tv_24" />
+
+    <ImageView
+        android:id="@+id/listImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/screen1_list_24" />
+
+    <ImageView
+        android:id="@+id/mainTrackImageView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/main_track" />
+
+    <ImageView
+        android:id="@+id/track1ImageView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/mainTrackImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/track1" />
+
+    <ImageView
+        android:id="@+id/track2ImageView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintStart_toEndOf="@+id/mainTrackImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/track2" />
+
+    <TextView
+        android:id="@+id/mainTrackTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="360dp"
+        android:text="Angel (feat. Julie Elven)"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/underMainTrackTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="3dp"
+        android:alpha="0.8"
+        android:text="R. Armando Morabito"
+        android:textColor="#B7C6C1"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainTrackTextView" />
+
+    <ImageView
+        android:id="@+id/shareImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="370dp"
+        app:layout_constraintEnd_toStartOf="@+id/moreImageView"
+        app:layout_constraintStart_toEndOf="@+id/mainTrackTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/screen1_share_24" />
+
+    <ImageView
+        android:id="@+id/moreImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="370dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/screen1_more_vert_24" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/underMainTrackTextView" />
+
+    <TextView
+        android:id="@+id/startSongTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="5dp"
+        android:alpha="0.8"
+        android:text="0:00"
+        android:textColor="#B7C6C1"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <TextView
+        android:id="@+id/endSongTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="55dp"
+        android:alpha="0.8"
+        android:text="5.27"
+        android:textColor="#B7C6C1"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <ImageView
+        android:id="@+id/loopSongImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/screen1_loop_24" />
+
+    <ImageView
+        android:id="@+id/highQualityImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/timerImageView"
+        app:layout_constraintStart_toEndOf="@+id/loopSongImageView"
+        app:srcCompat="@drawable/screen1_high_quality_24" />
+
+    <ImageView
+        android:id="@+id/timerImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/shuffleSongImageView"
+        app:layout_constraintStart_toEndOf="@+id/highQualityImageView"
+        app:srcCompat="@drawable/screen1_timer_24" />
+
+    <ImageView
+        android:id="@+id/shuffleSongImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/screen1_shuffle_24" />
+
+    <ImageView
+        android:id="@+id/deleteSongImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/loopSongImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        app:srcCompat="@drawable/screen1_delete_24" />
+
+    <ImageView
+        android:id="@+id/addSongImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/loopSongImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        app:srcCompat="@drawable/screen1_add_24" />
+
+    <ImageView
+        android:id="@+id/previousTrackImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/loopSongImageView"
+        app:layout_constraintEnd_toStartOf="@+id/whiteCircleTrackImageView"
+        app:layout_constraintStart_toEndOf="@+id/deleteSongImageView"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        app:srcCompat="@drawable/screen1_skip_previous_24" />
+
+    <ImageView
+        android:id="@+id/nextTrackImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/loopSongImageView"
+        app:layout_constraintEnd_toStartOf="@+id/addSongImageView"
+        app:layout_constraintStart_toEndOf="@+id/whiteCircleTrackImageView"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        app:srcCompat="@drawable/screen1_skip_next_24" />
+
+    <ImageView
+        android:id="@+id/whiteCircleTrackImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/loopSongImageView"
+        app:layout_constraintEnd_toStartOf="@id/nextTrackImageView"
+        app:layout_constraintStart_toEndOf="@id/previousTrackImageView"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        app:srcCompat="@drawable/circle_white" />
+
+    <ImageView
+        android:id="@+id/playTrackImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteCircleTrackImageView"
+        app:layout_constraintEnd_toEndOf="@+id/whiteCircleTrackImageView"
+        app:layout_constraintStart_toStartOf="@+id/whiteCircleTrackImageView"
+        app:layout_constraintTop_toTopOf="@+id/whiteCircleTrackImageView"
+        app:srcCompat="@drawable/screen1_play_arrow_24" />
+</androidx.constraintlayout.widget.ConstraintLayout>

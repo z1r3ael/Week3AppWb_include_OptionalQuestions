@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_color_screen1">#738C84</color>
+    <color name="main_color_screen2">#5B8FBB</color>
+    <color name="secondary_color_screen2">#858585</color>
+    <color name="screen2_delimiter_color">#EFEFEF</color>
+    <color name="screen3_circles_color">#F8F8F8</color>
+    <color name="screen3_red_color">#BA413C</color>
+    <color name="screen3_delimiter_color">#C9C9C9</color>
+    <color name="screen3_dark_grey_color">#9E9E9E</color>
+    <color name="screen3_green_color">#6AB319</color>
+    <color name="screen3_numbers_color">#535353</color>
+    <color name="screen4_blue_color">#1678F4</color>
+</resources>
